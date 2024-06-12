@@ -99,7 +99,9 @@ python main2.py --config configs/text.yaml prompt="a photo of an icecream" save_
 ```
 #### Sample output
 
+
 https://github.com/zchnee/2024-project3/blob/master/output/dog.mp4
+
 
 #### Citation
 
