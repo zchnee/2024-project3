@@ -65,9 +65,6 @@ python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=n
 # specify coarse mesh path explicity
 python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name mesh=logs/name_mesh.obj
 
-# gui mode
-python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name gui=True
-
 ### visualization
 # gui for visualizing mesh
 # `kire` is short for `python -m kiui.render`
