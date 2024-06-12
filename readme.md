@@ -99,8 +99,6 @@ python main2.py --config configs/text.yaml prompt="a photo of an icecream" save_
 ```
 #### Sample output
 
-![dog](https://github.com/zchnee/2024-project3/assets/134624129/3332017d-e38e-48ee-8d38-2d1eb1f116e0 =100x100)
-
 https://github.com/zchnee/2024-project3/assets/134624129/883cd0f2-f6e1-4504-b328-19d15e3464b7
 
 #### Citation
