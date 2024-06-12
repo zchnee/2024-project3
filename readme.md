@@ -21,7 +21,11 @@ ns-train nerfacto --data data/output/VID_20240524_165130 --vis viewer --max-num-
 ns-render camera-path --load-config outputs\VID_20240524_165130\nerfacto\2024-05-24_182248\config.yml --camera-path-filename E:\miniconda3\envs\nerfstudio\data\output\VID_20240524_165130\camera_paths\2024-05-24-18-23-00.json --output-path renders/VID_20240524_165130/2024-05-24-18-23-00.mp4
 ```
 
-https://github.com/zchnee/2024-project3/assets/134624129/f0f61edb-d80f-4259-915d-a4475e0b82e1
+
+
+https://github.com/zchnee/2024-project3/assets/134624129/c5b1ef45-dc87-4e33-95a8-44374004fbb9
+
+
 
 
 ### DreamGaussian部分
