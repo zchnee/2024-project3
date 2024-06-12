@@ -1,13 +1,37 @@
-### DreamGaussian
+### nerf
+
+#### trained model
+
+链接：https://pan.baidu.com/s/1eA_CNqmxcWShfntp8vQlrQ?pwd=6erk 
+提取码：6erk
+
+#### Input Video
+传入自己拍摄的视频，生成transforms.json：
+```
+ns-process-data video --data data/VID_20240524_165130.mp4 --output-dir data/output/VID_20240524_165130
+```
+#### Train Data
+```
+ns-train nerfacto --data data/output/VID_20240524_165130 --vis viewer --max-num-iterations 30000
+```
+可以在 http://localhost:7007/ 页面查看可视化训练过程
+#### Export Video
+训练完毕后，手动添加keyframe，使用网页端的generate command功能获取指令生成视频
+
+```
+ns-render camera-path --load-config outputs\VID_20240524_165130\nerfacto\2024-05-24_182248\config.yml --camera-path-filename E:\miniconda3\envs\nerfstudio\data\output\VID_20240524_165130\camera_paths\2024-05-24-18-23-00.json --output-path renders/VID_20240524_165130/2024-05-24-18-23-00.mp4
+```
+
+### DreamGaussian部分
 
 
-### [Colab](https://github.com/camenduru/dreamgaussian-colab)
+#### [Colab](https://github.com/camenduru/dreamgaussian-colab)
 
 - Image-to-3D: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sLpYmmLS209-e5eHgcuqdryFRRO6ZhFS?usp=sharing)
 - Text-to-3D: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/dreamgaussian-colab/blob/main/dreamgaussian_colab.ipynb)
 
 
-### Usage
+#### Usage
 
 Image-to-3D:
 
@@ -128,7 +152,7 @@ Gradio Demo:
 python gradio_app.py
 ```
 
-## Citation
+#### Citation
 
 ```
 @article{tang2023dreamgaussian,
