@@ -21,6 +21,9 @@ ns-train nerfacto --data data/output/VID_20240524_165130 --vis viewer --max-num-
 ns-render camera-path --load-config outputs\VID_20240524_165130\nerfacto\2024-05-24_182248\config.yml --camera-path-filename E:\miniconda3\envs\nerfstudio\data\output\VID_20240524_165130\camera_paths\2024-05-24-18-23-00.json --output-path renders/VID_20240524_165130/2024-05-24-18-23-00.mp4
 ```
 
+https://github.com/zchnee/2024-project3/assets/134624129/f0f61edb-d80f-4259-915d-a4475e0b82e1
+
+
 ### DreamGaussian部分
 
 
@@ -97,7 +100,7 @@ python main.py --config configs/text.yaml prompt="a photo of an icecream" save_p
 ### training mesh stage
 python main2.py --config configs/text.yaml prompt="a photo of an icecream" save_path=icecream
 ```
-#### Sample output
+#### Sample output (Image to 3D)
 
 https://github.com/zchnee/2024-project3/assets/134624129/883cd0f2-f6e1-4504-b328-19d15e3464b7
 
