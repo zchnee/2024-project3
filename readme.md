@@ -1,6 +1,6 @@
 ### nerf部分
 
-#### trained model
+#### Trained model
 
 [提取链接](https://pan.baidu.com/s/1eA_CNqmxcWShfntp8vQlrQ?pwd=6erk) 
 
