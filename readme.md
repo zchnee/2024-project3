@@ -97,8 +97,15 @@ python main.py --config configs/text.yaml prompt="a photo of an icecream" save_p
 ### training mesh stage
 python main2.py --config configs/text.yaml prompt="a photo of an icecream" save_path=icecream
 ```
-.
+#### Sample output
 
+<iframe 
+    height=450 
+    width=800 
+    src='https://github.com/zchnee/2024-project3/blob/master/output/dog.mp4' 
+    frameborder=0 
+    'allowfullscreen'>
+</iframe>
 
 
 #### Citation
