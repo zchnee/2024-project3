@@ -68,9 +68,6 @@ python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=n
 # gui mode
 python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name gui=True
 
-# export glb instead of obj
-python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name mesh_format=glb
-
 ### visualization
 # gui for visualizing mesh
 # `kire` is short for `python -m kiui.render`
