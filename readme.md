@@ -100,8 +100,6 @@ python main2.py --config configs/text.yaml prompt="a photo of an icecream" save_
 #### Sample output
 
 <iframe 
-    height=450 
-    width=800 
     src="https://github.com/zchnee/2024-project3/blob/master/output/dog.mp4" 
     frameborder="0" 
     allowfullscreen="true">
