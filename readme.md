@@ -1,58 +1,13 @@
-# DreamGaussian
+### DreamGaussian
 
-This repository contains the official implementation for [DreamGaussian: Generative Gaussian Splatting for Efficient 3D Content Creation](https://arxiv.org/abs/2309.16653).
 
-### [Project Page](https://dreamgaussian.github.io) | [Arxiv](https://arxiv.org/abs/2309.16653)
-
-https://github.com/dreamgaussian/dreamgaussian/assets/25863658/db860801-7b9c-4b30-9eb9-87330175f5c8
-
-### News
-
-- 2023.12.22: add experimental support for [ImageDream](https://github.com/bytedance/ImageDream), check [imagedream.yaml](./configs/image_sai.yaml).
-- 2023.12.14: add support for [Stable-Zero123](https://stability.ai/news/stable-zero123-3d-generation), check [image_sai.yaml](./configs/image_sai.yaml).
-- 2023.10.21: add support for [MVDream](https://github.com/bytedance/MVDream), check [text_mv.yaml](./configs/text_mv.yaml).
-
-### [Colab demo](https://github.com/camenduru/dreamgaussian-colab)
+### [Colab](https://github.com/camenduru/dreamgaussian-colab)
 
 - Image-to-3D: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sLpYmmLS209-e5eHgcuqdryFRRO6ZhFS?usp=sharing)
 - Text-to-3D: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/camenduru/dreamgaussian-colab/blob/main/dreamgaussian_colab.ipynb)
 
-### [Gradio demo](https://huggingface.co/spaces/jiawei011/dreamgaussian)
 
-- Image-to-3D: <a href="https://huggingface.co/spaces/jiawei011/dreamgaussian"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Gradio%20Demo-Huggingface-orange"></a>
-- Run Gradio demo on Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1owXJthskHoVXBNvxUB0Bg0JP2Rc7QsTe?usp=sharing)
-
-## Install
-
-```bash
-pip install -r requirements.txt
-
-# a modified gaussian splatting (+ depth, alpha rendering)
-git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
-pip install ./diff-gaussian-rasterization
-
-# simple-knn
-pip install ./simple-knn
-
-# nvdiffrast
-pip install git+https://github.com/NVlabs/nvdiffrast/
-
-# kiuikit
-pip install git+https://github.com/ashawkey/kiuikit
-
-# To use MVdream, also install:
-pip install git+https://github.com/bytedance/MVDream
-
-# To use ImageDream, also install:
-pip install git+https://github.com/bytedance/ImageDream/#subdirectory=extern/ImageDream
-```
-
-Tested on:
-
-- Ubuntu 22 with torch 1.12 & CUDA 11.6 on a V100.
-- Windows 10 with torch 2.1 & CUDA 12.1 on a 3070.
-
-## Usage
+### Usage
 
 Image-to-3D:
 
@@ -172,41 +127,6 @@ Gradio Demo:
 ```bash
 python gradio_app.py
 ```
-
-## Tips
-* The world & camera coordinate system is the same as OpenGL:
-```
-    World            Camera        
-  
-     +y              up  target                                              
-     |               |  /                                            
-     |               | /                                                
-     |______+x       |/______right                                      
-    /                /         
-   /                /          
-  /                /           
- +z               forward           
-
-elevation: in (-90, 90), from +y to -y is (-90, 90)
-azimuth: in (-180, 180), from +z to +x is (0, 90)
-```
-
-* Trouble shooting OpenGL errors (e.g., `[F glutil.cpp:338] eglInitialize() failed`): 
-```bash
-# either try to install OpenGL correctly (usually installed with the Nvidia driver), or use force_cuda_rast:
-python main.py --config configs/image_sai.yaml input=data/name_rgba.png save_path=name force_cuda_rast=True
-
-kire mesh.obj --force_cuda_rast
-```
-
-## Acknowledgement
-
-This work is built on many amazing research works and open-source projects, thanks a lot to all the authors for sharing!
-
-- [gaussian-splatting](https://github.com/graphdeco-inria/gaussian-splatting) and [diff-gaussian-rasterization](https://github.com/graphdeco-inria/diff-gaussian-rasterization)
-- [threestudio](https://github.com/threestudio-project/threestudio)
-- [nvdiffrast](https://github.com/NVlabs/nvdiffrast)
-- [dearpygui](https://github.com/hoffstadt/DearPyGui)
 
 ## Citation
 
