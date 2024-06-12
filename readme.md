@@ -2,7 +2,7 @@
 
 #### trained model
 
-![提取链接](https://pan.baidu.com/s/1eA_CNqmxcWShfntp8vQlrQ?pwd=6erk) 
+[提取链接](https://pan.baidu.com/s/1eA_CNqmxcWShfntp8vQlrQ?pwd=6erk) 
 
 #### Input Video
 传入自己拍摄的视频，生成transforms.json：
