@@ -82,11 +82,7 @@ kire logs/name.obj --save_video name.mp4 --wogui
 # save 8 view images of mesh (can run without gui)
 kire logs/name.obj --save images/name/ --wogui
 
-### evaluation of CLIP-similarity
-python -m kiui.cli.clip_sim data/name_rgba.png logs/name.obj
 ```
-
-Please check `./configs/image.yaml` for more options.
 
 Image-to-3D (stable-zero123):
 
@@ -107,49 +103,9 @@ python main.py --config configs/text.yaml prompt="a photo of an icecream" save_p
 ### training mesh stage
 python main2.py --config configs/text.yaml prompt="a photo of an icecream" save_path=icecream
 ```
+.
 
-Please check `./configs/text.yaml` for more options.
 
-Text-to-3D (MVDream):
-
-```bash
-### training gaussian stage
-python main.py --config configs/text_mv.yaml prompt="a plush toy of a corgi nurse" save_path=corgi_nurse
-
-### training mesh stage
-python main2.py --config configs/text_mv.yaml prompt="a plush toy of a corgi nurse" save_path=corgi_nurse
-```
-
-Please check `./configs/text_mv.yaml` for more options.
-
-Image+Text-to-3D (ImageDream):
-
-```bash
-### training gaussian stage
-python main.py --config configs/imagedream.yaml input=data/ghost_rgba.png prompt="a ghost eating hamburger" save_path=ghost
-
-### training mesh stage
-python main2.py --config configs/imagedream.yaml input=data/ghost_rgba.png prompt="a ghost eating hamburger" save_path=ghost
-```
-
-Helper scripts:
-
-```bash
-# run all image samples (*_rgba.png) in ./data
-python scripts/runall.py --dir ./data --gpu 0
-
-# run all text samples (hardcoded in runall_sd.py)
-python scripts/runall_sd.py --gpu 0
-
-# export all ./logs/*.obj to mp4 in ./videos
-python scripts/convert_obj_to_video.py --dir ./logs
-```
-
-Gradio Demo:
-
-```bash
-python gradio_app.py
-```
 
 #### Citation
 
